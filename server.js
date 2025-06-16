@@ -32,7 +32,7 @@ app.get('*', (req, res) => {
 });
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Karim:<db_password>@travel-website.xe2jvl4.mongodb.net/?retryWrites=true&w=majority&appName=Travel-website';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Karim:0120-0120@travel-website.xe2jvl4.mongodb.net/?retryWrites=true&w=majority&appName=Travel-website';
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('MongoDB connected successfully'))
   .catch(err => console.error('MongoDB connection error:', err));
@@ -41,7 +41,6 @@ mongoose.connect(MONGODB_URI)
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Access the website at: http://localhost:${PORT}`);
 });
 
 module.exports = app;
