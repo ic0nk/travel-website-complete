@@ -32,7 +32,7 @@ app.get('*', (req, res) => {
 });
 
 // MongoDB connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/travel-website';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://Karim:<db_password>@travel-website.xe2jvl4.mongodb.net/?retryWrites=true&w=majority&appName=Travel-website';
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('MongoDB connected successfully'))
   .catch(err => console.error('MongoDB connection error:', err));
